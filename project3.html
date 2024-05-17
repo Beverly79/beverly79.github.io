@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Redit Data Analysis - Qihang Wang</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#Top">Top</a></li>
+							<li><a href="#one">Introduction</a></li>
+							<li><a href="#two">Interactive Visualization</a></li>
+							<li><a href="#three">Hypothesis Testing</a></li>
+                            <li><a href="#four">Conclusion</a></li>
+						</ul>
+					</nav>
+					<ul class="icons">
+						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+						<li><a href="https://github.com/Beverly79" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://www.linkedin.com/in/qihang-wang-744103185/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</div>
+			</section>
+
+
+		
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Top -->
+					<section id="Top" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>News Recommender System</h1>
+							<p># Natural Language Processing &nbsp # Deep Learning
+								<br />#Name Entity Recognition (NER) &nbsp #Sentence Transformer</p>
+							<ul class="actions">
+								<li><a href="coming.html" class="button">GitHub Repository</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Introduction</h2>
+							<hr />
+							<p>As the most important financial center in the United States, New York City is famous for its prosperityand far-reaching influence. New York City is in reality a collection of many neighborhoods scatteredamong the city's five boroughs: Manhattan, Brooklyn, the Bronx, Queens, and Staten Island. According tothe most recent crime statistics released by the NYPD, the New York City police commissioner faces amurder rate that is 50 percent higher than it was before the pandemic and shootings that have doubledsince 2019. Therefore, it is time to increase awareness of public safety concerns.To address this critical issue, we propose building a data visualization that allows New York City citizensto form a basic recognition of New York City's crime condition. Our project will show the distribution offactors contributing to the high crime rate and allow people to protect themselves efficiently</p>
+                        </div>
+                    </section>
+
+
+                <!-- Two -->
+					<section id="two" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Interactive Visualiztion</h2>
+							<hr />
+                            <h3>Most common crimes occured in NYC</h3>
+							<p>As we know the crime rate in NYC is always high, people live in New York City worry about the risk around them. Is there a significant amount of crime happen in specific place?  Can we avoid them? To give people a clearer picture of where crime often occurs, the interaction stacked bar plot was created by using plotly. This plot shows the number of crimes in top 10 premises in 2021. We filtered the number of crimes in different premises and chose top 10 places. The color represents the three types of crime: violation, misdemeanor, and felony. In this plot, misdemeanor is the most frequent type of crime. Violation always happened in residence-apartment house, which is warning everyone to pay attention to indoor safety. </p>
+                            <iframe src="images/plotly_crime_premise.html" height="500" width="800" title="Iframe Example"></iframe>
+                            <br />
+                            <h3>Crimes under different weather condition</h3>
+							<p>Here we ask the question, is there any relationship between crime rate and weather, and does crime rate decrease when extreme weather occurs? This interactive scatterplot clearly shows us the 365 days of crime statistics and the impact of weather in 2021. We merged the two datasets New York weather data and crime data by date to get the final dataset with date, daily crime amount and daily weather conditions. When double-clicking any weather in the conditions, only this kind of weather data will be displayed on the map. We can see a significant drop in crime during the winter months of December-February, when it is snow-dominated. An upward trend in April-November when it is partially cloudy and rainy. When the weather is clear, crime rises until winter starts to drop in November.</p>
+                            <iframe src="images/plotly_crime_weather.html" height="500" width="800" title="Iframe Example"></iframe>
+                            <br />
+                            <h3>Who are the victims</h3>
+							<p>As we can see from this plot, there are more black victims than other races, white Hispanic ranks second, and white ranks third. We should also notice that most New York City citizens are white, which indicates that the proportion of black victims in all black citizens is much higher. Among all the black victims, females are more than males, especially in misdemeanor crimes. However, among all the Asian and Pacific Island victims, males are almost always more than females. More reported crimes are classified as misdemeanors than violations or felonies. There is no big change in the victim profiles through the year 2021.</p>
+                            <iframe src="images/plotly.express.html" height="750" width="900" title="Iframe Example"></iframe>
+                            <br />
+                            <h3>Calender heatmap of crime numbers</h3>
+							<p>In order to view the number of crimes occurred everyday, we made this calendar map by r2d3 (legend is still missing, but we are going to fix it soon). This interactive plot shows the number of crimes everyday in 2021, where lighter colors represent larger amounts. As we can see, crimes occurred most on Jan. 1st, possibly because it is New Years Day. Going home early on the first day of the year might be a wise choice to avoid danger. Unfortunately, the number of crimes is increasing through time in general.</p>
+                            <figure><span class="image fit"><img src="images/calendar_heatmap.png" alt="" /></span>
+                                <figcaption>explore the interactive plot <a href="images/r2d3_calendar.html">here</a></figcaption>
+                            <br />
+                            <h3>Treemap  of crime numbers</h3>
+							<p>A plotly treemap can show the similar information as the calendar map by using colors and sizes of areas as numbers of crimes. In this plot, we applied year - month - day as the path. It looks almost like a calendar except that the days and the months are descending sorted. October has the most crimes and Oct. 15th has the most crimes in October. By clicking each subtree, we can zoom in and see more detailed information. This interactive treemap can be useful to many users such as the reinforcement department.</p>
+                            <iframe src="images/py_plotly_treemap.html" height="450" width="800" title="Iframe Example"></iframe>
+                            <br />
+                            <h3>Crime distribution map</h3>
+							<p>A plotly treemap can show the similar information as the calendar map by using colors and sizes of areas as numbers of crimes. In this plot, we applied year - month - day as the path. It looks almost like a calendar except that the days and the months are descending sorted. October has the most crimes and Oct. 15th has the most crimes in October. By clicking each subtree, we can zoom in and see more detailed information. This interactive treemap can be useful to many users such as the reinforcement department.</p>
+                            <figure><span class="image eighty"><img src="images/shader_dotmap.png" alt="" /></span>
+                                <figcaption>explore the interactive plot <a href="images/shader_dotmap.html">here</a></figcaption>
+                        </div>
+                    </section>
+
+
+                <!-- Three -->
+					<section id="three" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Hypothesis Testing</h2>
+							<hr />
+                            <h3>Is crime equally likely to happen during weekdays and weekend?</h3>
+                            <p>The result shows that since p-value is greater than 0.05, At 5% significance level, we fail to reject the null hypothesis. So, we can conclude that crime counts per day of weekends is not greater than weekdays in New York. Different from what we expected, the crime count during weekends is less than weekday by 91.03 at 95% confidence interval.</p>
+                            <span class="image eighty"><img src="images/hypo-1.png" alt="" /></span>
+                            <br />
+                            <p>Another visual way to see the difference is to compare the box plot. As shown in below, the average is about the same but the 25% quantile of crimes at the weekend is much smaller than the number on weekdays.</p>
+                            <br />
+                            <span class="image eighty"><img src="images/ht1_boxplot.png" alt="" /></span>
+                            <br />
+                            <h3>Is the number of crimes in busy regions (Manhattan) greater than other places?</h3>
+                            <p>The result shows that since p-value is less than 0.05, At 5% significance level, we have enough evidence to reject the null hypothesis. So, we can conclude that crime counts per sq.km tends be greater than other places in New York. From the 95% confidence interval, we have 95% confidence that the mean crime counts per sq.km is greater than other places by 2.27.</p>
+                            <span class="image eighty"><img src="images/hypo-2.png" alt="" /></span>
+                            <br />
+                            <p>Similar to a box plot, a violin plot tells us the distribution of quantitative data across several levels of one (or more) categorical variables. In this case, it's quite obvius that there are a lot more crimes happening in Manhattan than in other areas.</p>
+                            <span class="image eighty"><img src="images/ht2_violinplot.png" alt="" /></span>
+						</div>
+                    </section>
+                
+
+                <!-- Five -->
+					<section id="four" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Conclusion</h2>
+                            <hr />        
+                            <p>Our project aims to provide people with the possibility of the occurrence of crime according to thegeospatial and time-related variables. The users are also able to take crime heat maps as a referral, whichenables them to have a clear view of crime probability. Suppose that Vicky is a college student from Columbia University and she often has courses in the evenings. Therefore, she wants to learn what kindof crime commonly takes place in the evening and whether it is safe near her campus and neighbor. Marycould take our project as a reference and take several variables to determine her safety status. When shedoes so, Vicky may notice that location and time appear to be strong predictors that indicate theoccurrence of crime. In fact, if it is late night and the location is near Brooklyn, then the best choice forVicky is to take an uber home instead of the subway.</p>
+                        </div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
